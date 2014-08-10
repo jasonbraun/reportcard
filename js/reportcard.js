@@ -108,7 +108,7 @@ function calcHeight() {
                 var badgesArray = badgeBuilder(badges);
 
                 // Badges this month
-                /* Not currently being used, but this could be for a "badeges this month" or "Badges this year" */
+                /* Not currently being used, but this could be for a "badges this month" or "Badges this year" */
                 var badgesThisMonth = 0,
                     badgesThisYear = 0;
                 $.each(badges, function (i) {
@@ -137,7 +137,7 @@ function calcHeight() {
                 },
                 success: function (data) {
                     var dObj = (typeof data === "string") ? JSON.parse(data) : data;
-                    $(".report-card.treehouse").append('<h1>I have passed ' + dObj.badges.length + ' lessons and scored ' + numberWithCommas(dObj.points.total) + ' points at Treehouse!</h1><p>Check out some of my last passed course content at the badges below: </p>');
+                    $(".report-card.treehouse").append('<h4>I&#8217;ve passed ' + dObj.badges.length + ' lessons and scored ' + numberWithCommas(dObj.points.total) + ' points at Treehouse!</h4><p>Check out what I&#8217;ve learned at the badges below: </p>');
                     generateBadges(dObj.badges.reverse());
                 },
                 error: function () {},
@@ -333,7 +333,7 @@ function calcHeight() {
         // This is the easiest way to have default options.
         var settings = $.extend({
             // These are the defaults.
-            userName: "rileyhilliard",
+            userName: "jasonbraun",
             site: "treehouse",
             badgesAmount: 6
         }, options);
